@@ -1,0 +1,19 @@
+{
+  "name" : "SampleGrunt",
+  "version" : "0.1.0",
+  "author" : "Mike Cunsolo",
+  "private" : true,
+
+  "devDependencies" : {
+    "grunt" :                   "~0.4.0",
+    "grunt-contrib-csslint":    "*",
+    "grunt-cssc":               "*",
+    "grunt-contrib-cssmin":     "*",
+    "grunt-htmlhint":           "*",
+    "grunt-contrib-htmlmin":    "*",
+    "grunt-contrib-watch":      "*",
+    "matchdep":                 "*",
+    "grunt-contrib-clean":      "*",
+    "grunt-responsive-images":  "*"
+  }
+}

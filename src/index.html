@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/min.css">
+</head>
+<body>
+<div class="grid">
+    <div class="row header">
+        <div class="wrapper">
+            <div class="col-2 logo">
+                <picture>
+                    <source media="(min-width: 321px)"
+                            srcset="images/udacity-logo-large_2x.jpg 2x, images/udacity-logo-large.jpg"/>
+                    <img src="images/udacity-logo-small.jpg" alt="Udacity Logo"
+                         srcset="images/udacity-logo-small_2x.jpg 2x, images/udacity-logo-small.jpg">
+                </picture>
+            </div>
+            <div class="col-10 title">
+                <h1 class="name">Jane Doette</h1>
+                <div class="job">Front-end Ninja</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 main-image">
+            <picture>
+                <source media="(min-width: 960px)"
+                        srcset="images/main-large_2x.jpg 2x, images/main-large.jpg"/>
+                <source media="(min-width: 480px)"
+                        srcset="images/main-medium_2x.jpg 2x, images/main-medium.jpg"/>
+                <img src="images/main-small.jpg" alt="Image with CSS code"
+                     srcset="images/main-small_2x.jpg 2x, images/main-small.jpg">
+            </picture>
+        </div>
+    </div>
+    <div class="row work">
+        <div class="header">Featured Work</div>
+        <div class="row">
+            <div class="col-4">
+                <picture>
+
+                </picture>
+            </div>
+            <div class="col-4"></div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+</div>
+<script src="js/picturefill.min.js"></script>
+</body>
+</html>
