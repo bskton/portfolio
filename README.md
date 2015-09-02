@@ -1,4 +1,4 @@
-## Project 0 for Project Nautilus ##
+## Responsive Portfolio Site ##
 
 ###Instructions:
 
