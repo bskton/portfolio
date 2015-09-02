@@ -142,31 +142,24 @@ module.exports = function(grunt){
                     'dist/images/main.jpg': 'src/images/main.jpg'
                 }
             },
-            build: {
+            works: {
                 options: {
-                    engine: 'im',
                     sizes: [{
-                        width: 80,
-                        quality: 50
+                        name: 'small',
+                        width: 320,
+                        quality: 90
                     },{
-                        width: 120,
-                        quality: 50
-                    },{
-                        width: 160,
-                        quality: 50
-                    },{
-                        width: 240,
-                        quality: 50
-                    },{
-                        width: 360,
-                        quality: 50
+                        name: 'small',
+                        width: 640,
+                        suffix: "_2x",
+                        quality: 90
                     }]
                 },
                 files: [{
                     expand: true,
                     src: ['*.{gif,jpg,png}'],
-                    cwd: 'src/images/',
-                    dest: 'dist/images/'
+                    cwd: 'src/images/works/',
+                    dest: 'dist/images/works/'
                 }]
             }
         },
@@ -191,8 +184,9 @@ module.exports = function(grunt){
     require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
 
     grunt.registerTask('buildhtml', ['htmlhint', 'htmlmin']);
-    grunt.registerTask('buildcss', ['csslint', 'cssc', 'cssmin']);
-    grunt.registerTask('build', ['clean:build', 'buildhtml', 'buildcss']);
+    grunt.registerTask('buildcss', ['csslint', 'cssc', 'cssmin', 'clean:css']);
+    grunt.registerTask('build', ['clean:build', 'buildhtml', 'buildcss', 'responsive_images:logo',
+        'responsive_images:main', 'responsive_images:works']);
     grunt.registerTask('default', ['build']);
     grunt.registerTask('buildimages', ['responsive_images']);
 };

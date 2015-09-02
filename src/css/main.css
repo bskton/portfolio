@@ -1,6 +1,6 @@
 body {
     font-family: 'Lato', sans-serif;
-    color: #898888;
+    color: #565555;
 }
 
 img {
@@ -10,6 +10,14 @@ img {
 .grid {
     max-width: 960px;
     margin: 0 auto;
+}
+
+.wrapper {
+    padding: 0 10px;
+}
+
+.header {
+    margin-bottom: 10px;
 }
 
 .header .wrapper {
@@ -44,7 +52,39 @@ h1.name {
 }
 
 .main-image {
-    padding-top: 10px;
+    margin-bottom: 30px;
+}
+
+.works .header {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 25px;
+    color: #bcbbbb;
+}
+
+.works .list .item {
+    margin-bottom: 25px;
+}
+
+.works .item .header {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: #565555;
+}
+
+.works .item .image {
+    margin-bottom: 5px;
+}
+
+.works .item .description {
+    text-align: justify;
+    padding-bottom: 5px;
+}
+
+.works .item .link {
+    text-align: center;
+    padding-bottom: 5px;
 }
 
 @media screen and (min-width: 480px) {
@@ -52,7 +92,7 @@ h1.name {
         max-width: 120px;
     }
 
-    h1.name {
+    .header .title .name {
         font-size: 6vw;
         margin-top: 1vw;
     }
@@ -60,6 +100,30 @@ h1.name {
     .job {
         display: block;
         font-size: 2.5vw;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .works .header {
+        text-align: left;
+        font-size: 2em;
+    }
+
+    .works .list .item {
+        display: flex;
+    }
+
+    .works .item .image,
+    .works .item .info {
+        width: 50%;
+    }
+
+    .works .item .info .wrapper {
+        padding-left: 10px;
+    }
+
+    .works .item .link {
+        text-align: left;
     }
 }
 
@@ -76,11 +140,15 @@ h1.name {
         width: 100%;
     }
 
+    .header {
+        margin-bottom: 30px;
+    }
+
     .header .wrapper {
         padding-bottom: 10px;
     }
 
-    h1.name {
+    .header .title .name {
         font-size: 3.4em;
         margin-top: 0.3em;
     }
@@ -89,7 +157,36 @@ h1.name {
         font-size: 1.3em;
     }
 
-    .main-image {
-        padding-top: 30px;
+    .works .list {
+        display: flex;
+    }
+
+    .works .item {
+        width: 33.33%;
+        flex-direction: column;
+    }
+
+    .works .item .info,
+    .works .item .image {
+        width: 100%;
+        padding: 0;
+    }
+
+    .works .left {
+        padding-right: 16px;
+    }
+
+    .works .center {
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+
+    .works .right {
+        padding-left: 16px;
+    }
+
+    .works .item .link,
+    .works .item .header {
+        text-align: center;
     }
 }
